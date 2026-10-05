@@ -38,3 +38,14 @@ export function completeTask(list: TaskList, id: number): TaskList {
 export function openTasks(list: TaskList): readonly Task[] {
   return list.tasks.filter((task) => !task.done);
 }
+
+/** The earliest-created open task, retaining the first task on ties. */
+export function oldestOpen(list: TaskList): Task | undefined {
+  let oldest: Task | undefined;
+  for (const task of list.tasks) {
+    if (!task.done && (!oldest || Date.parse(task.createdAt) < Date.parse(oldest.createdAt))) {
+      oldest = task;
+    }
+  }
+  return oldest;
+}
