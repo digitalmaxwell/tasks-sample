@@ -13,4 +13,5 @@ A small task-list library, kept as a sample project with real code, real tests a
 ## Modules
 
 - `src/tasks.ts`: add, complete and list tasks.
+- `oldestOpen(list)`: returns the earliest-created open task, or `undefined` when there is none.
 - `src/duration.ts`: parse short durations such as `15m`.
