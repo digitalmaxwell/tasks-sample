@@ -13,4 +13,5 @@ A small task-list library, kept as a sample project with real code, real tests a
 ## Modules
 
 - `src/tasks.ts`: add, complete and list tasks.
+- `totalCount(list)` in `src/tasks.ts`: count all tasks, completed or not.
 - `src/duration.ts`: parse short durations such as `15m`.

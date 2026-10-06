@@ -38,3 +38,8 @@ export function completeTask(list: TaskList, id: number): TaskList {
 export function openTasks(list: TaskList): readonly Task[] {
   return list.tasks.filter((task) => !task.done);
 }
+
+/** Counts all tasks, completed or not. */
+export function totalCount(list: TaskList): number {
+  return list.tasks.length;
+}
